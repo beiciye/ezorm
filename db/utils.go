@@ -9,6 +9,10 @@ func TimeToLocalTime(c time.Time) string {
 	return c.Local().Format("2006-01-02 15:04:05")
 }
 
+func TimeParseUnixTime(n int64) time.Time {
+	return time.Unix(n, 0)
+}
+
 func TimeParse(s string) time.Time {
 	var err error
 	var ret time.Time
@@ -30,6 +34,10 @@ func TimeParse(s string) time.Time {
 
 func TimeFormat(t time.Time) string {
 	return t.Format("2006-01-02 15:04:05")
+}
+
+func TimeFormatToUnix(t time.Time) int64 {
+	return t.Unix()
 }
 
 func TimeParseLocalTime(s string) time.Time {

@@ -250,6 +250,10 @@ var transformMap = map[string]Transform{
 		"string", `db.TimeParse(%v)`,
 		"time.Time", `db.TimeFormat(%v)`,
 	},
+	"mysql_unixtime": {
+		"int64", `db.TimeParseUnixTime(%v)`,
+		"time.Time", `db.TimeFormatToUnix(%v)`,
+	},
 	"mysql_timeint": { // INT(11)
 		"int64", "time.Unix(%v, 0)",
 		"time.Time", "%v.Unix()",

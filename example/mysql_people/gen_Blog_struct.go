@@ -14,6 +14,7 @@ type Blog struct {
 	IsPublished bool      `db:"is_published"`
 	Create      time.Time `db:"create"`
 	Update      time.Time `db:"update"`
+	TimeStamp   time.Time `db:"time_stamp"`
 	isNew       bool
 }
 

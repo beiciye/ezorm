@@ -32,6 +32,7 @@ func TestPeople(t *testing.T) {
 		IsPublished: true,
 		Create:      now,
 		Update:      now,
+		TimeStamp:   now,
 	}
 
 	if _, err := BlogMgr.Save(&blog); err != nil {
@@ -90,6 +91,9 @@ func TestPeople(t *testing.T) {
 		}
 		if blog.Update.Unix() != now.Unix() {
 			t.Fatal("not expected updatetime")
+		}
+		if blog.TimeStamp.Unix() != now.Unix() {
+			t.Fatal("not expected timestamp")
 		}
 	}
 	testForeignKey(t)

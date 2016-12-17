@@ -18,6 +18,7 @@ Blog:
       flags: [index]
     - Update: datetime
       flags: [index]
+    - TimeStamp: unixtime
   indexes: [[User, IsPublished]]
 
   table: Blog
